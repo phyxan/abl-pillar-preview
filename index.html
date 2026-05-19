@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
 <meta name="theme-color" content="#253e80" />
+<meta name="robots" content="noindex,follow" />
 <title>Roshan Digital Account: a Complete 2026 Guide for Overseas Pakistanis | Allied Bank</title>
 <meta name="description" content="The complete 2026 Allied Bank guide to the Roshan Digital Account (RDA): eligibility, account types, how to open online, funding, Naya Pakistan Certificates, Roshan Apna Ghar, taxation and FAQs." />
 
@@ -111,6 +112,7 @@
     --ice:#eaeef7;         /* very light blue for surfaces */
     --paper:#ffffff;
     --card:#ffffff;
+    --surface:#f7f8fb;
     --rule:#e5e7eb;
     --rule-2:#ababab;
     --green:#00d084;
@@ -131,18 +133,31 @@
   a:hover{ color:var(--orange); }
   img{ max-width:100%; height:auto; display:block; }
 
-  /* ====== TOP BAR ====== */
-  .topbar{ background:#ffffff; color:var(--ink); border-bottom:1px solid var(--rule); }
-  .topbar-inner{ max-width:var(--maxw); margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-  .brand{ display:flex; align-items:center; gap:12px; color:var(--navy); text-decoration:none; }
-  .brand img{ height:42px; width:auto; display:block; }
-  .topnav{ display:flex; gap:24px; }
-  .topnav a{ color:var(--navy); text-decoration:none; font-size:14px; font-weight:600; letter-spacing:.2px; position:relative; padding:6px 0; }
-  .topnav a:hover{ color:var(--orange); }
-  .topnav a:hover::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--orange); }
-  .lang{ display:flex; gap:8px; align-items:center; font-size:13px; color:var(--muted); }
-  .lang a{ color:var(--navy); text-decoration:none; font-weight:600; }
-  .lang [aria-current]{ color:var(--orange); font-weight:800; }
+  /* ====== TOP UTILITY STRIP (mirrors abl.com) ====== */
+  .util{ background:var(--navy-3); color:var(--ice); font-size:12.5px; }
+  .util-inner{ max-width:var(--maxw); margin:0 auto; padding:8px 24px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+  .util a{ color:var(--ice); text-decoration:none; }
+  .util a:hover{ color:var(--orange); }
+  .util-links{ display:flex; gap:18px; }
+  .util-right{ display:flex; align-items:center; gap:14px; }
+  .util-lang a{ color:#fff; font-weight:700; }
+  .util-lang [aria-current]{ color:var(--orange); }
+
+  /* ====== MAIN HEADER (mirrors abl.com) ====== */
+  .site-header{ background:#fff; border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:50; }
+  .hd-inner{ max-width:var(--maxw); margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+  .brand{ display:flex; align-items:center; color:var(--navy); text-decoration:none; }
+  .brand img{ height:44px; width:auto; display:block; }
+  nav.primary{ display:flex; gap:30px; }
+  nav.primary a{ color:var(--navy); text-decoration:none; font-weight:700; font-size:14.5px; letter-spacing:.2px; text-transform:uppercase; padding:8px 0; position:relative; }
+  nav.primary a:hover, nav.primary a[aria-current]{ color:var(--orange); }
+  nav.primary a[aria-current]::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--orange); }
+  .hd-right{ display:flex; align-items:center; gap:14px; }
+  .icon-btn{ width:36px; height:36px; border-radius:8px; display:grid; place-items:center; background:var(--surface, #f7f8fb); color:var(--navy); font-size:16px; cursor:pointer; border:1px solid var(--rule); }
+  .icon-btn:hover{ background:#eaeef7; color:var(--orange); }
+  .login{ background:var(--orange); color:#fff !important; font-weight:800; font-size:14px; padding:10px 18px; border-radius:8px; letter-spacing:.3px; text-decoration:none; }
+  .login:hover{ background:#d65a14; color:#fff !important; }
+  @media (max-width: 880px){ nav.primary{ display:none; } }
 
   /* ====== READING PROGRESS ====== */
   .progress{ position:sticky; top:0; height:3px; background:transparent; z-index:50; }
@@ -291,24 +306,45 @@
   .sources li{ margin: 2px 0; }
   .last-reviewed{ font-size: 13px; color:var(--muted); margin-top:14px; }
 
-  /* Footer CTA */
+  /* Footer CTA (above the abl-footer) */
   .foot-cta{ background:linear-gradient(135deg, var(--navy-3) 0%, var(--navy) 100%); color:#fff; padding: 48px 20px; margin-top: 60px; position:relative; overflow:hidden; }
   .foot-cta::after{ content:""; position:absolute; right:-80px; top:-80px; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle, rgba(243,111,33,.25), transparent 70%); }
   .foot-cta-inner{ max-width:var(--maxw); margin: 0 auto; display:grid; grid-template-columns: 1.4fr 1fr; gap: 36px; align-items: center; position:relative; z-index:1; }
   @media (max-width: 800px){ .foot-cta-inner{ grid-template-columns: 1fr; } }
   .foot-cta h2{ color:#fff; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px; }
   .foot-cta p{ color: var(--ice); margin: 0; }
-  .foot-cta .cta-btn{ background: var(--orange); color: #fff !important; padding: 14px 24px; font-size: 16px; }
+  .foot-cta .cta-btn{ background: var(--orange); color: #fff !important; padding: 14px 24px; font-size: 16px; text-decoration:none; border-radius:8px; font-weight:800; }
   .foot-cta .cta-btn:hover{ background:#d65a14; }
 
-  footer.site{ background:var(--navy-3); color:#cdd4e4; padding: 22px 20px; font-size: 13px; }
-  footer.site .inner{ max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-  footer.site a{ color: #cdd4e4; }
-  footer.site a:hover{ color: var(--orange); }
+  /* ====== FULL ABL FOOTER (mirrors abl.com layout) ====== */
+  .abl-footer{ background:var(--navy-3); color:#cdd4e4; padding:60px 24px 0; }
+  .abl-footer .ft-inner{ max-width:var(--maxw); margin:0 auto; }
+  .abl-footer .ft-grid{ display:grid; grid-template-columns:2fr 1fr 1fr 1fr 1.2fr; gap:36px; }
+  @media (max-width:980px){ .abl-footer .ft-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:540px){ .abl-footer .ft-grid{ grid-template-columns:1fr; } }
+  .abl-footer .ft-col h4{ font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:#fff; margin:0 0 16px; font-weight:800; }
+  .abl-footer .ft-col ul{ list-style:none; padding:0; margin:0; }
+  .abl-footer .ft-col li{ margin:0 0 9px; }
+  .abl-footer .ft-col a{ color:#cdd4e4; font-size:13.5px; text-decoration:none; }
+  .abl-footer .ft-col a:hover{ color:var(--orange); }
+  .abl-footer .ft-brand .ft-logo{ background:#fff; padding:12px 16px; border-radius:8px; display:inline-block; margin-bottom:18px; }
+  .abl-footer .ft-brand .ft-logo img{ height:34px; width:auto; }
+  .abl-footer .ft-brand p{ color:#cdd4e4; font-size:13px; line-height:1.6; margin:0 0 18px; max-width:360px; }
+  .abl-footer .ft-social{ display:flex; gap:10px; }
+  .abl-footer .ft-social a{ width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.08); display:grid; place-items:center; color:#fff; font-size:13px; font-weight:800; }
+  .abl-footer .ft-social a:hover{ background:var(--orange); }
+  .abl-footer .news-input{ display:flex; gap:10px; }
+  .abl-footer .news-input input{ flex:1; padding:14px 16px; border-radius:8px; border:none; font-size:14px; outline:none; }
+  .abl-footer .news-input button{ background:var(--orange); color:#fff; border:none; padding:0 22px; border-radius:8px; font-weight:800; cursor:pointer; }
+  .abl-footer .news-input button:hover{ background:#d65a14; }
+  .abl-footer .ft-bottom{ border-top:1px solid rgba(255,255,255,.1); margin-top:48px; padding:22px 0 30px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-size:12.5px; color:#9aa5bb; }
+  .abl-footer .ft-bottom a{ color:#9aa5bb; }
+  .abl-footer .ft-bottom a:hover{ color:var(--orange); }
+  .abl-footer .ft-bottom-links{ display:flex; gap:18px; flex-wrap:wrap; }
 
   /* Print */
   @media print{
-    .topbar,.progress,.toc,.foot-cta,footer.site,.lang,.related,.hero{ display:none !important; }
+    .util, .site-header, .progress, .toc, .foot-cta, .abl-footer, .related, .hero{ display:none !important; }
     body{ background:#fff; color:#000; font-size:11pt; }
     .layout{ display:block; padding:0; margin:0; }
     .body h2{ break-after: avoid; }
@@ -317,23 +353,39 @@
 </head>
 <body>
 
-<!-- ============ TOP BAR ============ -->
-<header class="topbar" role="banner">
-  <div class="topbar-inner">
-    <a class="brand" href="/" aria-label="Allied Bank home">
-      <img src="abl-logo.png" alt="Allied Bank Limited" width="200" height="40" />
+<!-- ============ TOP UTILITY STRIP (matches abl.com) ============ -->
+<div class="util">
+  <div class="util-inner">
+    <div class="util-links">
+      <a href="https://www.abl.com/forex-rates/">Forex Rates</a>
+      <a href="https://www.abl.com/services/atm-branch-warehouse-locator/">Branch &amp; ATM Locator</a>
+      <a href="https://www.abl.com/the-bank/careers/">Careers</a>
+      <a href="https://www.abl.com/investor-relations/">Investor Relations</a>
+    </div>
+    <div class="util-right">
+      <span class="util-lang"><a href="https://www.abl.com/blog/roshan-digital-account-complete-guide/" aria-current="page">EN</a> &nbsp;|&nbsp; <a href="https://www.abl.com/ur/blog/roshan-digital-account-complete-guide/">اردو</a></span>
+      <a href="https://www.abl.com/contact/">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MAIN HEADER (matches abl.com) ============ -->
+<header class="site-header" role="banner">
+  <div class="hd-inner">
+    <a class="brand" href="https://www.abl.com/" aria-label="Allied Bank home">
+      <img src="abl-logo.png" alt="Allied Bank Limited" width="220" height="44" />
     </a>
-    <nav class="topnav" aria-label="Primary">
-      <a href="/personal/">Personal</a>
-      <a href="/business-banking/">Business</a>
-      <a href="/islamic/">Islamic</a>
-      <a href="/personal/roshan-digital-services/">Roshan Digital</a>
-      <a href="/blog/">Blog</a>
+    <nav class="primary" aria-label="Primary">
+      <a href="https://www.abl.com/personal/">Personal</a>
+      <a href="https://www.abl.com/business-banking/">Business</a>
+      <a href="https://www.abl.com/islamic/">Islamic</a>
+      <a href="https://www.abl.com/personal/roshan-digital-services/">Roshan Digital</a>
+      <a href="https://www.abl.com/blog/" aria-current="page">Insights</a>
+      <a href="https://www.abl.com/about/">About</a>
     </nav>
-    <div class="lang" aria-label="Language">
-      <a href="/blog/roshan-digital-account-complete-guide/" aria-current="page">EN</a>
-      <span>|</span>
-      <a href="/ur/blog/roshan-digital-account-complete-guide/">اردو</a>
+    <div class="hd-right">
+      <button class="icon-btn" aria-label="Search">🔍</button>
+      <a class="login" href="https://myabl.com">Login to myABL</a>
     </div>
   </div>
 </header>
@@ -343,11 +395,11 @@
 <!-- ============ BREADCRUMB ============ -->
 <div class="crumb-wrap">
   <nav class="crumb" aria-label="Breadcrumb">
-    <a href="/">Home</a>
+    <a href="https://www.abl.com/">Home</a>
     <span class="crumb-sep">/</span>
-    <a href="/blog/">Blog</a>
+    <a href="https://www.abl.com/blog/">Blog</a>
     <span class="crumb-sep">/</span>
-    <a href="/blog/category/roshan-digital-account/">Roshan Digital Account</a>
+    <a href="https://www.abl.com/blog/category/roshan-digital-account/">Roshan Digital Account</a>
     <span class="crumb-sep">/</span>
     <span aria-current="page">Complete 2026 guide</span>
   </nav>
@@ -431,7 +483,7 @@
         <h4>Ready to open your RDA?</h4>
         <p>Start the online application. Verification typically completes within one working day.</p>
       </div>
-      <a class="cta-btn" href="/personal/roshan-digital-services/roshan-digital-account-rda/">Open RDA online</a>
+      <a class="cta-btn" href="https://www.abl.com/personal/roshan-digital-services/roshan-digital-account-rda/">Open RDA online</a>
     </div>
 
     <!-- 03 -->
@@ -464,11 +516,11 @@
     <h2 id="what-you-can-do">What you can do with your RDA</h2>
     <div class="lead"><p>Once your RDA is active you can hold, send and convert funds, invest in Naya Pakistan Certificates, finance a home in Pakistan via Allied Roshan Apna Ghar, finance a vehicle via Allied Roshan Apni Car, invest in the Pakistan Stock Exchange via Roshan Equity Investment, build retirement savings via Roshan Pension Plan, and donate to vetted causes via Roshan Samaaji Khidmat. Every product is operated entirely online from your home country.</p></div>
     <h3>Investment</h3>
-    <p><a href="/personal/roshan-digital-services/naya-pakistan-certificate-investment/">Naya Pakistan Certificates</a> are sovereign instruments issued by the Government of Pakistan exclusively to RDA holders, in tenors from three months to five years, in PKR or USD, with periodic profit pay-outs and a final 10 percent withholding tax. <a href="/personal/roshan-digital-services/roshan-equity-investment/">Roshan Equity Investment</a> lets you place orders on the Pakistan Stock Exchange directly from your RDA, in PKR, through Allied Bank's brokerage partners.</p>
+    <p><a href="https://www.abl.com/personal/roshan-digital-services/naya-pakistan-certificate-investment/">Naya Pakistan Certificates</a> are sovereign instruments issued by the Government of Pakistan exclusively to RDA holders, in tenors from three months to five years, in PKR or USD, with periodic profit pay-outs and a final 10 percent withholding tax. <a href="https://www.abl.com/personal/roshan-digital-services/roshan-equity-investment/">Roshan Equity Investment</a> lets you place orders on the Pakistan Stock Exchange directly from your RDA, in PKR, through Allied Bank's brokerage partners.</p>
     <h3>Financing</h3>
-    <p><a href="/personal/roshan-digital-services/allied-roshan-apna-ghar/">Allied Roshan Apna Ghar</a> is a home-financing programme for overseas Pakistanis built on the Diminishing Musharakah structure. <a href="/personal/roshan-digital-services/allied-roshan-apni-car/">Allied Roshan Apni Car</a> provides car financing on the Aitebar Car Ijarah lease structure. Both are Shariah-compliant and disbursed directly to dealers and developers in Pakistan.</p>
+    <p><a href="https://www.abl.com/personal/roshan-digital-services/allied-roshan-apna-ghar/">Allied Roshan Apna Ghar</a> is a home-financing programme for overseas Pakistanis built on the Diminishing Musharakah structure. <a href="https://www.abl.com/personal/roshan-digital-services/allied-roshan-apni-car/">Allied Roshan Apni Car</a> provides car financing on the Aitebar Car Ijarah lease structure. Both are Shariah-compliant and disbursed directly to dealers and developers in Pakistan.</p>
     <h3>Retirement and giving</h3>
-    <p><a href="/personal/roshan-digital-services/roshan-pension-plan/">Roshan Pension Plan</a> is a State Bank-regulated voluntary retirement programme for non-resident Pakistanis with tax-advantaged contributions. <a href="/personal/roshan-digital-services/roshan-samaaji-khidmat/">Roshan Samaaji Khidmat</a> is the donation gateway for vetted Pakistani charities and Allied-curated relief funds.</p>
+    <p><a href="https://www.abl.com/personal/roshan-digital-services/roshan-pension-plan/">Roshan Pension Plan</a> is a State Bank-regulated voluntary retirement programme for non-resident Pakistanis with tax-advantaged contributions. <a href="https://www.abl.com/personal/roshan-digital-services/roshan-samaaji-khidmat/">Roshan Samaaji Khidmat</a> is the donation gateway for vetted Pakistani charities and Allied-curated relief funds.</p>
 
     <!-- WTMFY -->
     <div class="wtm">
@@ -493,7 +545,7 @@
     <!-- 08 -->
     <h2 id="day-to-day">Operating your RDA day to day</h2>
     <div class="lead"><p>You operate your Allied RDA entirely through the Roshan Digital Portal and the myABL mobile and web apps, with the same biometric, OTP and device-binding controls used by resident Allied customers. You can pay bills in Pakistan, send PKR transfers via IBFT, top up family debit cards, manage your card limits, and download monthly statements without contacting a branch.</p></div>
-    <p>Most account-management actions take place inside <a href="/personal/digital-banking-services/">myABL</a>. The Roshan Digital Portal is used for actions specific to non-residents: initiating a Naya Pakistan Certificate purchase, placing a Roshan Equity order, or beginning a Roshan Apna Ghar application. Both share the same login credentials.</p>
+    <p>Most account-management actions take place inside <a href="https://www.abl.com/personal/digital-banking-services/">myABL</a>. The Roshan Digital Portal is used for actions specific to non-residents: initiating a Naya Pakistan Certificate purchase, placing a Roshan Equity order, or beginning a Roshan Apna Ghar application. Both share the same login credentials.</p>
     <p>If you change phone number or device, you can re-bind biometric authentication in 60 seconds without losing access. If you forget your password, the recovery flow uses your CNIC, OTP and a video step. Customer support is available 24 hours a day, 7 days a week through chat inside the app and through a dedicated overseas Pakistanis helpline.</p>
 
     <!-- FAQ -->
@@ -520,7 +572,7 @@
       </details>
       <details class="q">
         <summary>Does Allied Bank charge fees for RDA account maintenance?</summary>
-        <div class="a"><p>Account maintenance is governed by the Allied Bank <a href="/schedule-of-charges/">Schedule of Charges</a> in force at the time of the transaction. Most RDA-specific transactions, including SWIFT inward remittance and PKR transfers, are subject to State Bank-approved tariffs. Check the live Schedule of Charges before transferring large sums.</p></div>
+        <div class="a"><p>Account maintenance is governed by the Allied Bank <a href="https://www.abl.com/schedule-of-charges/">Schedule of Charges</a> in force at the time of the transaction. Most RDA-specific transactions, including SWIFT inward remittance and PKR transfers, are subject to State Bank-approved tariffs. Check the live Schedule of Charges before transferring large sums.</p></div>
       </details>
       <details class="q">
         <summary>Can I open an RDA jointly with my spouse?</summary>
@@ -548,17 +600,17 @@
       <div class="related-grid">
         <article class="rel-card">
           <div class="rel-tag">Country guide</div>
-          <a href="/blog/roshan-digital-account-uk/">RDA from the UK: how British Pakistanis open and fund a Roshan account</a>
+          <a href="https://www.abl.com/blog/roshan-digital-account-uk/">RDA from the UK: how British Pakistanis open and fund a Roshan account</a>
           <p>Documents, GBP funding, HMRC reporting and what to expect from Allied's UK desk.</p>
         </article>
         <article class="rel-card">
           <div class="rel-tag">Product</div>
-          <a href="/blog/naya-pakistan-certificates/">Naya Pakistan Certificates explained: rates, tenors and how to invest via RDA</a>
+          <a href="https://www.abl.com/blog/naya-pakistan-certificates/">Naya Pakistan Certificates explained: rates, tenors and how to invest via RDA</a>
           <p>PKR and USD denominations, profit pay-out schedule, withholding tax and worked examples.</p>
         </article>
         <article class="rel-card">
           <div class="rel-tag">Financing</div>
-          <a href="/blog/roshan-apna-ghar/">Roshan Apna Ghar: home financing for overseas Pakistanis</a>
+          <a href="https://www.abl.com/blog/roshan-apna-ghar/">Roshan Apna Ghar: home financing for overseas Pakistanis</a>
           <p>How the Diminishing Musharakah structure works and what documents Allied will ask for.</p>
         </article>
       </div>
@@ -607,15 +659,94 @@
       <p>Fifteen minutes online. One working day to activate. Everything Pakistani banking can do, from anywhere in the world.</p>
     </div>
     <div>
-      <a class="cta-btn" href="/personal/roshan-digital-services/roshan-digital-account-rda/">Start your RDA application</a>
+      <a class="cta-btn" href="https://www.abl.com/personal/roshan-digital-services/roshan-digital-account-rda/">Start your RDA application</a>
     </div>
   </div>
 </section>
 
-<footer class="site">
-  <div class="inner">
-    <span>&copy; 2026 Allied Bank Limited. Regulated by the State Bank of Pakistan.</span>
-    <span><a href="/schedule-of-charges/">Schedule of Charges</a>  &nbsp;|&nbsp;  <a href="/contact/">Contact</a>  &nbsp;|&nbsp;  <a href="/website-compliance-certificate/">Website Compliance</a></span>
+<!-- ============ FOOTER (matches abl.com pattern) ============ -->
+<footer class="abl-footer" role="contentinfo">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-col ft-brand">
+        <span class="ft-logo"><img src="abl-logo.png" alt="Allied Bank Limited" /></span>
+        <p>Allied Bank Limited is one of the largest commercial banks in Pakistan, with more than 1,400 branches across the country and Roshan Digital Services for overseas Pakistanis in 175+ countries.</p>
+        <div class="ft-social" aria-label="Follow us">
+          <a href="https://www.facebook.com/alliedbankpk" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/ablpk" aria-label="X / Twitter">𝕏</a>
+          <a href="https://www.linkedin.com/company/allied-bank-limited/" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/alliedbankpk/" aria-label="Instagram">IG</a>
+          <a href="https://www.youtube.com/@alliedbankpk" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.abl.com/forex-rates/">Forex Rates</a></li>
+          <li><a href="https://www.abl.com/forex-calculator/">Forex Calculator</a></li>
+          <li><a href="https://www.abl.com/business-banking/accounts/home-remittances/">Home Remittances</a></li>
+          <li><a href="https://www.abl.com/personal/roshan-digital-services/">Roshan Digital</a></li>
+        </ul>
+      </div>
+
+      <div class="ft-col">
+        <h4>Other Services</h4>
+        <ul>
+          <li><a href="https://www.abl.com/services/other-services/pay-your-bills-online/">Pay Your Bills Online</a></li>
+          <li><a href="https://www.abl.com/services/other-services/allied-bankers-cheque/">Allied Banker's Cheque</a></li>
+          <li><a href="https://www.abl.com/services/other-services/call-deposit-receipt-cdr/">Call Deposit Receipt</a></li>
+          <li><a href="https://www.abl.com/services/other-services/prism/">PRISM</a></li>
+          <li><a href="https://www.abl.com/services/atm-branch-warehouse-locator/branches-and-atms-network/">Branches and ATMs</a></li>
+          <li><a href="https://www.abl.com/services/atm-branch-warehouse-locator/list-of-branches-with-ramps/">Branches with Ramps</a></li>
+          <li><a href="https://www.abl.com/e-prc-issuance/">e-PRC Issuance</a></li>
+          <li><a href="https://www.abl.com/e-prc-verification/">e-PRC Verification</a></li>
+          <li><a href="https://www.abl.com/lg-verification/">LG Verification</a></li>
+        </ul>
+      </div>
+
+      <div class="ft-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="https://www.pakistanbanaocertificates.gov.pk/index">Pakistan Banao Scheme</a></li>
+          <li><a href="https://ras.abl.com/">ABL FX Facilitation Portal</a></li>
+          <li><a href="https://sunwai.sbp.org.pk/">SBP Sunwai - Complaints</a></li>
+        </ul>
+        <h4 style="margin-top:24px;">Downloads</h4>
+        <ul>
+          <li><a href="https://www.abl.com/investor-relations/financials/financial-reports/">Financial Reports</a></li>
+          <li><a href="https://www.abl.com/services/downloads/glossary/">Glossary</a></li>
+          <li><a href="https://www.abl.com/services/downloads/schedule-of-charges/">Schedule of Charges</a></li>
+          <li><a href="https://www.abl.com/wp-content/uploads/2026/05/ABL-Sustainability-Report-2025.pdf">Sustainability Report 2025</a></li>
+        </ul>
+      </div>
+
+      <div class="ft-col">
+        <h4>Subscribe</h4>
+        <p style="color:#cdd4e4; font-size:13px; margin:0 0 12px;">Subscribe to our mailing list to get updates to your email inbox.</p>
+        <form onsubmit="event.preventDefault();" style="margin-bottom:24px;">
+          <div class="news-input">
+            <input type="email" placeholder="Email address" aria-label="Email" />
+            <button type="submit">Go</button>
+          </div>
+        </form>
+        <h4>Subsidiaries</h4>
+        <ul>
+          <li><a href="https://www.ablamc.com/">ABL Asset Management</a></li>
+        </ul>
+        <p style="font-size:12px; color:#9aa5bb; margin-top:18px;">Last Updated 19 May 2026</p>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div>&copy; 2026 Allied Bank Limited. All Rights Reserved.</div>
+      <div class="ft-bottom-links">
+        <a href="https://www.abl.com/privacy-policy/">Privacy Policy</a>
+        <a href="https://www.abl.com/disclaimer/">Disclaimer</a>
+        <a href="https://www.abl.com/abl-sitemap/">Sitemap</a>
+        <a href="https://www.abl.com/website-compliance-certificate/">Website Compliance</a>
+        <a href="https://www.abl.com/contact/">Contact</a>
+      </div>
+    </div>
   </div>
 </footer>
 
