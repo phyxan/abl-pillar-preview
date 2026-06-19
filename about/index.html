@@ -48,7 +48,7 @@
       "foundingLocation": { "@type": "Place", "name": "Lahore, British India (now Pakistan)" },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Main Boulevard, New Garden Town",
+        "streetAddress": "3 Tipu Block, Main Boulevard, New Garden Town",
         "addressLocality": "Lahore",
         "addressRegion": "Punjab",
         "postalCode": "54600",
@@ -66,7 +66,7 @@
       "parentOrganization": { "@type": "Organization", "name": "Ibrahim Group" },
       "subOrganization": [
         { "@type": "Organization", "name": "ABL Funds (ABL Asset Management Company Limited)", "url": "https://www.ablamc.com/" },
-        { "@type": "Organization", "name": "ABL Exchange (Private) Limited", "url": "https://www.abl.com/the-bank/abl-exchange/" }
+        { "@type": "Organization", "name": "ABL Exchange (Private) Limited", "url": "https://www.ablexchange.pk/" }
       ],
       "owns": [
         { "@type": "Brand", "name": "myABL" },
@@ -188,10 +188,10 @@
       "@type": "ItemList",
       "name": "Allied Bank leadership",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@type": "Person", "name": "Mohammad Naeem Mukhtar", "jobTitle": "Chairman, Allied Bank Limited", "worksFor": { "@id": "https://www.abl.com/#organization" } } },
-        { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Aizid Razzaq Gill", "jobTitle": "President and Chief Executive Officer", "worksFor": { "@id": "https://www.abl.com/#organization" } } },
+        { "@type": "ListItem", "position": 1, "item": { "@type": "Person", "name": "Mohammad Naeem Mukhtar", "jobTitle": "Chairman, Allied Bank Limited", "worksFor": { "@id": "https://www.abl.com/#organization" }, "sameAs": ["https://www.linkedin.com/in/naeem-mukhtar-3207101b/"] } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Aizid Razzaq Gill", "jobTitle": "President and Chief Executive Officer", "worksFor": { "@id": "https://www.abl.com/#organization" }, "sameAs": ["https://www.linkedin.com/in/aizid-gill-594879174"] } },
         { "@type": "ListItem", "position": 3, "item": { "@type": "Person", "name": "Muhammad Atif Mirza", "jobTitle": "Chief Financial Officer", "worksFor": { "@id": "https://www.abl.com/#organization" } } },
-        { "@type": "ListItem", "position": 4, "item": { "@type": "Person", "name": "Group Head, Allied Islamic اعتبار Banking", "jobTitle": "Group Head, Allied Islamic Banking (ABL Aitebar)", "worksFor": { "@id": "https://www.abl.com/#organization" } } }
+        { "@type": "ListItem", "position": 4, "item": { "@type": "Person", "name": "Muhammad Naeem Razaq", "jobTitle": "Group Head, IB Operations, Products and Policies Management (Allied Islamic اعتبار Banking - ABL Aitebar)", "worksFor": { "@id": "https://www.abl.com/#organization" } } }
       ]
     },
     {
@@ -397,18 +397,9 @@
   @media (max-width:520px){ .leaders{ grid-template-columns:1fr; } }
   .leader{ text-align:center; background:#fff; border:1px solid var(--rule); border-radius:14px; padding:24px 18px; box-shadow:var(--shadow-1); }
   .leader-photo{ width:88px; height:88px; border-radius:50%; margin:0 auto 14px; background:linear-gradient(135deg, var(--navy), var(--navy-2)); display:grid; place-items:center; color:#fff; font-weight:800; font-size:24px; border:3px solid var(--orange); }
-  /* Allied Bank "Alpha" mark - orange box with a white A, mirroring the corporate logo style */
-  .leader-photo.alpha{ background:#fff; border:1px solid var(--rule); padding:8px; position:relative; }
-  .leader-photo.alpha .alpha-mark{
-    width:100%; height:100%; border-radius:50%; background:var(--orange); color:#fff;
-    display:grid; place-items:center; font-weight:900; font-size:36px;
-    font-family: Georgia, "Times New Roman", serif;
-    letter-spacing:-2px; line-height:1; position:relative; box-shadow: 0 2px 6px rgba(243,111,33,.25);
-  }
-  .leader-photo.alpha .alpha-mark::after{
-    content:""; position:absolute; left:18%; right:18%; bottom:24%; height:4px;
-    background:var(--navy); border-radius:2px; transform: skewX(-12deg);
-  }
+  /* Allied Bank official "Alpha" mark - real PNG from ABL Brand assets */
+  .leader-photo.alpha-img{ background:#fff; border:1px solid var(--rule); padding:6px; display:grid; place-items:center; overflow:hidden; }
+  .leader-photo.alpha-img img{ width:100%; height:100%; object-fit:contain; }
   /* Footnote anchors used in the citable About paragraph */
   .src-ref{ display:inline-block; font-size:0.65em; vertical-align:super; color:var(--orange); font-weight:800; padding:0 2px; text-decoration:none; }
   .src-ref:hover{ color:var(--navy); }
@@ -440,15 +431,12 @@
   .award-card{ background:#fff; border:1px solid var(--rule); border-radius:12px; padding:22px; display:flex; gap:14px; box-shadow:var(--shadow-1); transition: transform .15s, box-shadow .15s; }
   .award-card:hover{ transform:translateY(-2px); box-shadow:var(--shadow-2); }
   .award-trophy{ width:44px; height:44px; border-radius:10px; background:var(--orange-tint); display:grid; place-items:center; color:var(--orange); font-size:20px; font-weight:800; flex-shrink:0; }
-  /* Branded award badges - swap with publisher logos in production */
-  .award-badge{ width:52px; height:52px; border-radius:10px; display:grid; place-items:center; color:#fff; font-weight:800; font-size:13px; flex-shrink:0; letter-spacing:.3px; box-shadow:0 2px 4px rgba(0,0,0,.08); }
-  .award-badge.fa  { background:linear-gradient(135deg,#1a4f8f,#0c2567); }
-  .award-badge.em  { background:linear-gradient(135deg,#7a1f3d,#4a0f24); }
-  .award-badge.am  { background:linear-gradient(135deg,#0d6b53,#053b2c); }
-  .award-badge.tb  { background:linear-gradient(135deg,#1a1a1a,#000); }
-  .award-badge.pda { background:linear-gradient(135deg,#01683a,#013e22); }
-  .award-badge.gd  { background:linear-gradient(135deg,#5e2a8d,#321549); }
-  .award-badge.ibp { background:linear-gradient(135deg,#b85423,#7e3914); }
+  /* Award badge container. .img modifier hosts real publisher logos from ABL Brand assets. */
+  .award-badge{ width:64px; height:64px; border-radius:10px; display:grid; place-items:center; color:#fff; font-weight:800; font-size:13px; flex-shrink:0; letter-spacing:.3px; }
+  .award-badge.img{ background:#fff; border:1px solid var(--rule); padding:4px; overflow:hidden; }
+  .award-badge.img img{ width:100%; height:100%; object-fit:contain; display:block; }
+  /* Coloured fallback for badges without a publisher logo asset (IBP) */
+  .award-badge.ibp{ background:linear-gradient(135deg,#b85423,#7e3914); box-shadow:0 2px 4px rgba(0,0,0,.08); }
   .award-card h3{ font-size:15px; margin:0 0 4px; color:var(--navy); line-height:1.3; }
   .award-card .yr{ font-size:12px; color:var(--orange); font-weight:700; }
   .award-card p{ font-size:13px; color:var(--muted); margin:0; line-height:1.5; }
@@ -676,7 +664,7 @@
       <h2 class="s-title">One of Pakistan's largest commercial banks, since 1942.</h2>
     </div>
     <div class="glance">
-      <strong>Allied Bank Limited (ABL)</strong> is a Pakistani commercial bank headquartered on Main Boulevard, New Garden Town, Lahore, and a subsidiary of the <strong>Ibrahim Group</strong>. Founded on <strong>3 December 1942</strong> by Khawaja Bashir Bux as <em>Australasia Bank</em> with initial capital of Rs 120,000, ABL is one of Pakistan's oldest commercial banks. As of 2025, ABL is the <strong>7th largest bank in Pakistan by market capitalisation</strong> and serves approximately <strong>7 percent of all Pakistani bank deposits</strong> <a href="#sources" class="src-ref">[1]</a>. The bank is listed on the Pakistan Stock Exchange (ticker: ABL, KSE 100 component), regulated by the <strong>State Bank of Pakistan</strong>, and operates more than <strong>1,500 branches</strong> nationwide along with an ATM network of <strong>1,701 machines</strong> (1,456 on-site, 245 off-site). Its asset management arm is <strong>ABL Funds</strong>, its foreign-exchange subsidiary is <strong>ABL Exchange (Private) Limited</strong>, and its Islamic banking division is <strong>Allied Islamic اعتبار Banking (ABL Aitebar)</strong>.
+      <strong>Allied Bank Limited (ABL)</strong> is a Pakistani commercial bank headquartered at 3 Tipu Block, Main Boulevard, New Garden Town, Lahore, and a subsidiary of the <strong>Ibrahim Group</strong>. Founded on <strong>3 December 1942</strong> by Khawaja Bashir Bux as <em>Australasia Bank</em> with initial capital of Rs 120,000, ABL is one of Pakistan's oldest commercial banks. As of 2025, ABL is the <strong>7th largest bank in Pakistan by market capitalisation</strong> and serves approximately <strong>7 percent of all Pakistani bank deposits</strong> <a href="#sources" class="src-ref">[1]</a>. The bank is listed on the Pakistan Stock Exchange (ticker: ABL, KSE 100 component), regulated by the <strong>State Bank of Pakistan</strong>, and operates more than <strong>1,500 branches</strong> nationwide along with an ATM network of <strong>1,701 machines</strong> (1,456 on-site, 245 off-site). Its asset management arm is <strong>ABL Funds</strong>, its foreign-exchange subsidiary is <strong>ABL Exchange (Private) Limited</strong>, and its Islamic banking division is <strong>Allied Islamic اعتبار Banking (ABL Aitebar)</strong>.
     </div>
     <p>ABL has been part of Pakistan's banking landscape since before the country was created. In 1942 the bank started as <strong>Australasia Bank</strong> in pre-Partition Lahore, founded by Khawaja Bashir Bux, who was born in 1911 to a Kashmir-origin silk-trading family that had relocated through Bombay and Perth before settling in Lahore. The bank was one of the first commercial banks established by Muslim entrepreneurs in the subcontinent. After Partition in 1947, it continued to operate in the newly created Pakistan. In 1974, under Prime Minister Zulfikar Ali Bhutto's nationalisation policy, Australasia Bank was merged with <strong>Sarhad Bank, Lahore Commercial Bank and Pakistan Bank</strong> and renamed Allied Bank of Pakistan, becoming one of the five nationalised commercial banks. In 1991 it became the first Pakistani bank to be privatised, through an employee buy-out. The <strong>Ibrahim Group</strong> acquired control in 2004, and the bank was renamed <strong>Allied Bank Limited</strong> in 2005.</p>
     <p>Today, ABL is a full-service commercial bank with a strong presence in retail, SME, corporate, Islamic and digital banking. In 2024 it reported revenue of <strong>Rs 404.74 billion (US$1.4 billion)</strong>, total assets of <strong>Rs 2.81 trillion (US$10 billion)</strong>, and serves customers with a workforce of <strong>13,066 employees</strong> <a href="#sources" class="src-ref">[2]</a>. The <strong>myABL</strong> digital banking platform supports over <strong>2.5 million</strong> active users. Allied Islamic اعتبار Banking (ABL Aitebar) operates as an independent group inside the same legal entity with its own Shariah Supervisory Board. <a href="https://www.abl.com/personal/roshan-digital-services/">Roshan Digital Services</a>, launched in 2020 with the State Bank of Pakistan, positions ABL as a leading Pakistani bank for the overseas diaspora and is available in 175+ countries. In 2024-25, the bank was named <strong>"Pakistan's Best Digital Bank for Large Corporations"</strong> by Euromoney and won six categories at the <strong>FinanceAsia Country Awards</strong> <a href="#sources" class="src-ref">[3]</a>.</p>
@@ -697,7 +685,7 @@
       <div class="fact"><div class="fact-l">Initial capital</div><div class="fact-v">Rs 120,000</div><div class="fact-s">Lahore, 1942</div></div>
       <div class="fact"><div class="fact-l">Listed</div><div class="fact-v">PSX · ABL</div><div class="fact-s">KSE 100 component</div></div>
       <div class="fact"><div class="fact-l">Parent</div><div class="fact-v">Ibrahim Group</div><div class="fact-s">Controlling shareholder since 2004</div></div>
-      <div class="fact"><div class="fact-l">Headquarters</div><div class="fact-v">Lahore</div><div class="fact-s">Main Boulevard, New Garden Town</div></div>
+      <div class="fact"><div class="fact-l">Headquarters</div><div class="fact-v">Lahore</div><div class="fact-s">3 Tipu Block, Main Boulevard, New Garden Town</div></div>
       <div class="fact"><div class="fact-l">Bank ranking</div><div class="fact-v">7th</div><div class="fact-s">Largest by market cap (2025)</div></div>
       <div class="fact"><div class="fact-l">Branches</div><div class="fact-v">1,500+</div><div class="fact-s">All four provinces &amp; AJK/GB</div></div>
       <div class="fact"><div class="fact-l">ATM network</div><div class="fact-v">1,701</div><div class="fact-s">1,456 on-site + 245 off-site</div></div>
@@ -760,31 +748,31 @@
     </div>
     <div class="leaders">
       <div class="leader">
-        <div class="leader-photo alpha" aria-hidden="true"><span class="alpha-mark">A</span></div>
+        <div class="leader-photo alpha-img" aria-hidden="true"><img src="assets/ABL_Alpha_logo.png" alt="" /></div>
         <div class="leader-name">Mohammad Naeem Mukhtar</div>
         <div class="leader-role">Chairman</div>
         <div class="leader-bio">Chairman of the Board since the 2004 acquisition by Ibrahim Group, the bank's controlling shareholder.</div>
-        <a href="https://www.abl.com/investor-relations/board-of-directors/" class="leader-linkedin">View profile →</a>
+        <a href="https://www.linkedin.com/in/naeem-mukhtar-3207101b/" rel="noopener" target="_blank" class="leader-linkedin">View LinkedIn →</a>
       </div>
       <div class="leader">
-        <div class="leader-photo alpha" aria-hidden="true"><span class="alpha-mark">A</span></div>
+        <div class="leader-photo alpha-img" aria-hidden="true"><img src="assets/ABL_Alpha_logo.png" alt="" /></div>
         <div class="leader-name">Aizid Razzaq Gill</div>
         <div class="leader-role">President &amp; CEO</div>
         <div class="leader-bio">Leads day-to-day operations, strategy execution and regulatory relationships across personal, business, Islamic and digital banking.</div>
-        <a href="https://www.abl.com/investor-relations/board-of-directors/" class="leader-linkedin">View profile →</a>
+        <a href="https://www.linkedin.com/in/aizid-gill-594879174" rel="noopener" target="_blank" class="leader-linkedin">View LinkedIn →</a>
       </div>
       <div class="leader">
-        <div class="leader-photo alpha" aria-hidden="true"><span class="alpha-mark">A</span></div>
+        <div class="leader-photo alpha-img" aria-hidden="true"><img src="assets/ABL_Alpha_logo.png" alt="" /></div>
         <div class="leader-name">Muhammad Atif Mirza</div>
         <div class="leader-role">Chief Financial Officer</div>
         <div class="leader-bio">Oversees financial reporting, capital adequacy, treasury and investor relations.</div>
         <a href="https://www.abl.com/investor-relations/board-of-directors/" class="leader-linkedin">View profile →</a>
       </div>
       <div class="leader">
-        <div class="leader-photo alpha" aria-hidden="true"><span class="alpha-mark">A</span></div>
-        <div class="leader-name">Group Head, Islamic Banking</div>
-        <div class="leader-role">Allied Islamic اعتبار Banking</div>
-        <div class="leader-bio">Leads Allied Islamic اعتبار Banking (ABL Aitebar) with Shariah Supervisory Board oversight on every product.</div>
+        <div class="leader-photo alpha-img" aria-hidden="true"><img src="assets/ABL_Alpha_logo.png" alt="" /></div>
+        <div class="leader-name">Muhammad Naeem Razaq</div>
+        <div class="leader-role">Group Head, Islamic Banking</div>
+        <div class="leader-bio">Group Head, IB Operations, Products and Policies Management (GH-IBG Ops, PPM-IBG). Leads Allied Islamic اعتبار Banking (ABL Aitebar) with Shariah Supervisory Board oversight on every product.</div>
         <a href="https://www.abl.com/islamic/" class="leader-linkedin">Allied Islamic →</a>
       </div>
     </div>
@@ -803,7 +791,7 @@
     <div class="awards-group-h">FinanceAsia Country Awards 2025 - Pakistan</div>
     <div class="awards">
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Best Domestic Bank - Pakistan</h3>
@@ -811,7 +799,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Best Bank for Financial Inclusion</h3>
@@ -819,7 +807,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Best Sustainable Bank</h3>
@@ -827,7 +815,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Most DEI Progressive Bank</h3>
@@ -835,7 +823,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Most Innovative Use of Technology</h3>
@@ -843,7 +831,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge fa">FA</div>
+        <div class="award-badge fa img"><img src="assets/FinanceAsia.png" alt="FinanceAsia"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Best Commercial Bank - SMEs</h3>
@@ -855,7 +843,7 @@
     <div class="awards-group-h" style="margin-top:36px;">Other international &amp; industry recognition</div>
     <div class="awards">
       <div class="award-card">
-        <div class="award-badge em">EM</div>
+        <div class="award-badge em img"><img src="assets/Euromoney.png" alt="Euromoney"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Euromoney - Pakistan's Best Digital Bank for Large Corporations</h3>
@@ -863,7 +851,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge am">AM</div>
+        <div class="award-badge am img"><img src="assets/Asia_Money.png" alt="Asiamoney"></div>
         <div>
           <span class="yr">Multi-year</span>
           <h3>Asiamoney - Best Bank Pakistan</h3>
@@ -871,7 +859,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge tb">TB</div>
+        <div class="award-badge tb img"><img src="assets/The_Banker.png" alt="The Banker"></div>
         <div>
           <span class="yr">Multi-year</span>
           <h3>The Banker (FT) - Bank of the Year Pakistan</h3>
@@ -879,7 +867,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge pda">PDA</div>
+        <div class="award-badge pda img"><img src="assets/Pakistan-Digital-Banking-Awards-2026.png" alt="Pakistan Digital Banking Awards 2026"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Pakistan Digital Awards - Best Digital Bank for Corporates</h3>
@@ -887,7 +875,7 @@
         </div>
       </div>
       <div class="award-card">
-        <div class="award-badge gd">GDIB</div>
+        <div class="award-badge gd img"><img src="assets/GDIB.png" alt="GDIB"></div>
         <div>
           <span class="yr">2025</span>
           <h3>Global Diversity &amp; Inclusion Benchmarks Awards</h3>
@@ -918,6 +906,13 @@
       </div>
     </div>
     <div class="news-grid">
+      <article class="news-card">
+        <div class="news-date">15-05-2026</div>
+        <h3><a href="https://www.abl.com/allied-bank-recognized-with-seven-prestigious-awards-at-pakistan-digital-awards-2026/" rel="noopener" target="_blank">Allied Bank recognised with seven prestigious awards at Pakistan Digital Awards 2026</a></h3>
+        <p>Allied Bank's official announcement confirming seven category wins at the Pakistan Digital Awards 2026, including recognition for digital banking, mobile banking, and corporate digital transformation.</p>
+        <div class="news-meta"><span class="news-tag">Allied Bank</span> Awards</div>
+      </article>
+
       <article class="news-card">
         <div class="news-date">05-05-2026</div>
         <h3><a href="https://propakistani.pk/2026/05/05/lums-collaborates-with-allied-bank-to-advance-robotics-innovation-in-banking/" rel="noopener" target="_blank">LUMS collaborates with Allied Bank to advance robotics innovation in banking</a></h3>
@@ -1398,7 +1393,7 @@
       <details open><summary>What is Allied Bank?</summary><div class="a">Allied Bank Limited (ABL) is one of Pakistan's largest commercial banks, founded on 3 December 1942 in Lahore as Australasia Bank by Khawaja Bashir Bux. It is listed on the Pakistan Stock Exchange (ticker: ABL, KSE 100 component), regulated by the State Bank of Pakistan, and is part of the Ibrahim Group. ABL is the 7th largest bank in Pakistan by market capitalisation, operates more than 1,500 branches with an ATM network of 1,701 machines, and supports over 2.5 million myABL digital banking users.</div></details>
       <details><summary>When was Allied Bank founded?</summary><div class="a">Allied Bank was founded on 3 December 1942 in Lahore as Australasia Bank. It was renamed Allied Bank of Pakistan in 1974 after consolidation under the Banks (Nationalization) Act, and then Allied Bank Limited in 2005 after the Ibrahim Group acquired control in 2004.</div></details>
       <details><summary>Who owns Allied Bank?</summary><div class="a">Allied Bank Limited is a publicly listed company on the Pakistan Stock Exchange (ticker: ABL). The Ibrahim Group, led by Chairman Mohammad Naeem Mukhtar, is the majority (sponsor) shareholder. The remaining shares are held by the public including domestic and foreign institutional investors. Current pattern-of-shareholding is filed quarterly with PSX and published in the Allied Bank Annual Report.</div></details>
-      <details><summary>What is Allied Bank's shareholding pattern?</summary><div class="a">Allied Bank's pattern-of-shareholding is updated each quarter and disclosed in regulatory filings to the Pakistan Stock Exchange. Ibrahim Group entities hold the controlling sponsor stake. Institutional investors (mutual funds, insurance companies, pension funds, foreign institutional investors) and retail public shareholders hold the remaining float. See the latest Annual Report and PSX filings for exact percentages.</div></details>
+      <details><summary>What is Allied Bank's shareholding pattern?</summary><div class="a">Allied Bank's pattern-of-shareholding is updated each quarter and disclosed in regulatory filings to the Pakistan Stock Exchange. Ibrahim Group entities hold the controlling sponsor stake. Institutional investors (mutual funds, insurance companies, pension funds, foreign institutional investors) and retail public shareholders hold the remaining float. <a href="assets/Pattern-of-Shareholding-2025.pdf" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700;">Download the Pattern of Shareholding 2025 (PDF) →</a></div></details>
       <details><summary>Is Allied Bank Islamic or conventional?</summary><div class="a">Both. Allied Bank operates under Pakistan's dual banking system. It offers conventional banking and Shariah-compliant Islamic banking through Allied Islamic اعتبار Banking (ABL Aitebar), an independently operated group inside the same legal entity with its own Shariah Supervisory Board, separate books and dedicated branches.</div></details>
       <details><summary>How many branches does Allied Bank have?</summary><div class="a">Allied Bank operates more than 1,500 branches across Pakistan, along with an ATM network of 1,701 machines (1,456 on-site and 245 off-site). Through Roshan Digital Services, the bank also serves overseas Pakistanis in more than 175 countries.</div></details>
       <details><summary>Where is Allied Bank's head office?</summary><div class="a">Main Boulevard, New Garden Town, Lahore, Punjab 54600, Pakistan. The bank also operates regional offices and a major corporate office in Karachi.</div></details>
@@ -1486,7 +1481,7 @@
       </div>
       <div class="contact-card">
         <h3>Head office</h3>
-        <p class="info">Main Boulevard, New Garden Town</p>
+        <p class="info">3 Tipu Block, Main Boulevard, New Garden Town</p>
         <p class="meta">Lahore, Punjab 54600, Pakistan</p>
       </div>
     </div>
@@ -1562,7 +1557,7 @@
         <h4>Subsidiaries</h4>
         <ul>
           <li><a href="https://www.ablamc.com/">ABL Asset Management (ABL Funds)</a></li>
-          <li><a href="https://www.abl.com/the-bank/abl-exchange/">ABL Exchange (Private) Limited</a></li>
+          <li><a href="https://www.ablexchange.pk/" rel="noopener" target="_blank">ABL Exchange (Private) Limited</a></li>
         </ul>
         <p style="font-size:12px; color:#9aa5bb; margin-top:18px;">Last Updated 15 May 2026</p>
       </div>
